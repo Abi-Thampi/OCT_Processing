@@ -1,6 +1,6 @@
-build/
-dist/
-Meat_processing.egg-info/
+/build/*
+/dist/*
+/Meat_processing.egg-info/*
 
 
 
