@@ -1,8 +1,0 @@
-README.txt
-setup.py
-Meat_processing/Meat_processing.py
-Meat_processing/__init__.py
-Meat_processing.egg-info/PKG-INFO
-Meat_processing.egg-info/SOURCES.txt
-Meat_processing.egg-info/dependency_links.txt
-Meat_processing.egg-info/top_level.txt
