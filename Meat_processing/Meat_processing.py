@@ -1,8 +1,6 @@
-from nptdms import TdmsFile,TdmsObject,TdmsWriter,ChannelObject
 import matplotlib.pylab as plt
 from matplotlib.collections import PathCollection
 import numpy as np
-from PIL import Image
 from scipy import signal,ndimage
 import numpy.ma as ma
 import os as os
@@ -100,13 +98,12 @@ def Voxel_Ret(vox):
     biref = phase[-1]        
     return(biref)
 
-def Heatmap_Int(Int, voxC=5, voxB=15, voxA = 20):
-    jumpA = 5
-    jumpB = 2
-    jumpC = 2
+def Heatmap_Int(Int, voxC=5, voxB=15, voxA = 20, step = 5):
+    #umpB = 2
+    #jumpC = 2
     #set up arrays
-    atten_b =[]
-    atten_a = []
+    #atten_b =[]
+    #tten_a = []
     atten_c = []
     Intmean = []
     Depth = []
@@ -131,7 +128,7 @@ def Heatmap_Int(Int, voxC=5, voxB=15, voxA = 20):
     Depth = np.array(Depth)
     # for each averaged B-scan divide the image into voxels and calculate the attenuation
 
-    atten_c, masked_c = atten_Int(Intmean, Depth, voxA, voxB,jumpA)
+    atten_c, masked_c = atten_Int(Intmean, Depth, voxA, voxB, step)
     return(atten_c, masked_c, Intmean)
 
 def Roll_image(Im, threshold, length = 5, skip = 10):
