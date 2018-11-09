@@ -161,9 +161,7 @@ def hist_output(save_location, data_location, B_averages, show = True):
     ### This function creates a 1D array with attenuation values calculated from intensity C_scans.
     ### The B-scans within each C-scan are Rolled and masked so that data above the surface of the sample and data that is too deep to get good SNR are removed.
 
-    # if the save location doesn't exit, make the directory
-    if not os.path.exists(save_location):
-                os.makedirs(save_location)
+
 
     ### for each grid in the data location run the processing code.
     for file in glob.glob(data_location + "grid*_Int.npy"):
@@ -196,6 +194,9 @@ def hist_output(save_location, data_location, B_averages, show = True):
             ### remove any bad values
             masked_c[np.isnan(masked_c)] = 0
             ### save the data in the save location.
+                # if the save location doesn't exit, make the directory
+            if not os.path.exists(save_location):
+                os.makedirs(save_location)
             np.save(save_location + gridname + '_masked.npy', masked_c)
             if show == True:
                 plt.figure()

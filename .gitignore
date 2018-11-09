@@ -1,3 +1,5 @@
 build/*
 dist/*
 Meat_processing.egg-info/*
+processed_data/*
+processed_FFT/*

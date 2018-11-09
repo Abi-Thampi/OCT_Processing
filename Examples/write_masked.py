@@ -1,7 +1,7 @@
 from Meat_processing import Meat_processing as processing
 
 
-data_location = '/media/sam/Seagate Backup Plus Drive/OCT_data/Numpy_data/'
+data_location = '/home/sam/Meat_Raw_data/Numpy_data/'
 samples = range(691,723,1)
 save_location = './processed_data/'
 for x in samples:
