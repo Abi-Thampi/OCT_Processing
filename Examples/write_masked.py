@@ -10,11 +10,3 @@ for x in samples:
     read = data_location + str(x) + '/'
     processing.hist_output(save, read, 5, show = False)
     
-
-
-
-#for x in samples:
-#    save = save_location + str(x) + '/'
-#    read = data_location + str(x) + '/'
-
-#    hist_data, edges = pytdms.hist_output(save, read, 5, show = True)
